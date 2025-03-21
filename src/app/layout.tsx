@@ -25,7 +25,7 @@ export default function RootLayout({
         <div className="mx-auto max-w-[85rem] w-full">
           <main className="content bg-black w-full">
             <div className="nav-container">
-              <Nav  />
+              <Nav />
             </div>
 
             <div className="item-container mt-0">{children}</div>

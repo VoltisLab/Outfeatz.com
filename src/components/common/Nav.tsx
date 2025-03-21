@@ -8,12 +8,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface NavProps {
-  setToggle: (value: boolean) => void;
-  toggle: boolean;
-}
-
-const Nav = ({ setToggle, toggle }: NavProps) => {
+const Nav = () => {
   const links = [
     {
       name: "Products",
@@ -47,6 +42,7 @@ const Nav = ({ setToggle, toggle }: NavProps) => {
   };
 
   const [navBackground, setNavBackground] = useState("bg-transparent");
+  const [toggle, setToggle] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
