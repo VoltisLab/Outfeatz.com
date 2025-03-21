@@ -17,7 +17,7 @@ const Featured = () => {
       <h2 className="text-3xl my-10 mb-20 font-bold text-center ">Featured and seen in</h2>
 
       {/* Scrollable container */}
-      <div className="flex overflow-x-auto hide-scrollbar space-x-4 px-4 items-center snap-x snap-mandatory">
+      <div className="flex justify-center overflow-x-auto hide-scrollbar space-x-4 px-4 items-center snap-x snap-mandatory">
         {bands.map((band) => (
           <div
             key={band.id}

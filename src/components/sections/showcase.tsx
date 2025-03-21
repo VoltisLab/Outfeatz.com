@@ -4,7 +4,7 @@ import Image from "next/image";
 const Showcase = () => {
   return (
     <section
-      className="relative w-full mt-[120px] md:mt-[150px] h-auto md:h-[600px] bg-[url('/images/bg-website-min.svg')] bg-contain bg-center flex flex-col md:flex-row items-center px-8 md:px-16 py-12"
+      className="relative w-full mt-[120px] md:mt-[250px] h-auto md:h-[600px] bg-[url('/images/bg-website-min.svg')] bg-contain bg-center flex flex-col md:flex-row items-center px-8 md:px-16 py-12"
     >
       {/* Text container */}
       <div className="w-full md:w-1/2 text-white space-y-6 mb-8 md:mb-0">
