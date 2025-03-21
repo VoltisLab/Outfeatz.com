@@ -9,11 +9,11 @@ export default function CreativeWorkflowSection() {
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center">
         {/* Left Side - Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
-          <p className="text-blue-400 text-sm font-semibold">✨ Workflow</p>
+          <p className="text-[#36C5F0] text-sm font-semibold">✨ Workflow</p>
           <h1 className="text-4xl md:text-5xl font-bold mt-3 leading-tight">
             Create at <br />
-            the <span className="text-blue-400">speed</span> <br />
-            of <span className="text-blue-400">thought</span>.
+            the <span className="text-[#36C5F0]">speed</span> <br />
+            of <span className="text-[#36C5F0]">thought</span>.
           </h1>
           <p className="text-gray-400 mt-4">
             Focus on getting your thoughts out and crafting the best message
@@ -34,12 +34,13 @@ export default function CreativeWorkflowSection() {
       />
     </div>
     <h3 className="text-white font-semibold text-lg mt-4">No gatekeeping</h3>
-    <p className="text-gray-400 text-sm mt-2 text-center">
-      Fashion is evolving, and <span className="text-blue-400">Outfeatz</span> puts your style in focus.
-      <br />
-      <span className="text-blue-400">Tag</span> and insert brands directly into your cutouts, making it
-      easy to track outfits, highlight favorite labels, and curate looks effortlessly.
-    </p>
+    <p className="text-gray-400 text-[18px] mt-2 text-justify">
+  Fashion is evolving, and <span className="text-[#36C5F0]">Outfeatz</span> puts your style in focus.
+</p>
+<p className="text-gray-400 text-[18px] mt-2 text-justify">
+  <span className="text-[#36C5F0]">Tag</span> and insert brands directly into your cutouts, making it
+  easy to track outfits, highlight favorite labels, and curate looks effortlessly.
+</p>
   </div>
 </div>
       </div>

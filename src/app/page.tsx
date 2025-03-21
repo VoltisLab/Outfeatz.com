@@ -1,6 +1,7 @@
 import CreativeWorkflowSection from "@/components/sections/creativeWork";
 import FashionSection from "@/components/sections/fashion";
 import Featured from "@/components/sections/featured";
+import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
 import Showcase from "@/components/sections/showcase";
 
@@ -13,6 +14,7 @@ export default function Home() {
     <Showcase/>
     <FashionSection/>
     <CreativeWorkflowSection/>
+    <Footer/>
     </div>
   );
 }
