@@ -4,10 +4,9 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <section
-      className="relative w-full h-screen bg-[url('/images/hero-cont.png')] bg-no-repeat bg-contain bg-top"
+      className="relative w-full h-[780px] bg-[url('/images/hero-cont.png')] bg-no-repeat bg-contain bg-top"
     >
-      {/* Section comes here
-       */}
+      {/* Section content goes here */}
     </section>
   );
 };
