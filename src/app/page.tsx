@@ -1,3 +1,4 @@
+import CreativeWorkflowSection from "@/components/sections/creativeWork";
 import FashionSection from "@/components/sections/fashion";
 import Featured from "@/components/sections/featured";
 import Hero from "@/components/sections/hero";
@@ -11,6 +12,7 @@ export default function Home() {
     <Featured/>
     <Showcase/>
     <FashionSection/>
+    <CreativeWorkflowSection/>
     </div>
   );
 }
