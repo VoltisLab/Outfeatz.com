@@ -3,11 +3,17 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section
-      className="relative w-full h-[780px] bg-[url('/images/hero-cont.png')] bg-no-repeat bg-contain bg-top"
-    >
-      {/* Section content goes here */}
-    </section>
+    <div className="relative w-full pt-20"> {/* Offset nav and add padding */}
+      <Image 
+        src="/images/hero-cont.png" 
+        alt="Hero Background" 
+        width={1920} 
+        height={1080} 
+        layout="responsive" 
+        objectFit="contain" 
+        priority
+      />
+    </div>
   );
 };
 

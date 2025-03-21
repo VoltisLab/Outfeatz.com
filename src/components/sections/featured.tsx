@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 
 const Featured = () => {
-  // Example array of band images
   const bands = [
     { id: 1, src: "/images/techcrunch.svg", alt: "TechCrunch" },
     { id: 2, src: "/images/forbes.svg", alt: "Forbes" },
@@ -13,23 +12,23 @@ const Featured = () => {
   ];
 
   return (
-    <section className="w-full py-20 text-white">
+    <section className="w-full mt-30 mb-30  text-white">
       {/* Heading */}
-      <h2 className="text-3xl font-bold text-center mb-6">Featured and seen in</h2>
+      <h2 className="text-3xl my-10 mb-20 font-bold text-center ">Featured and seen in</h2>
 
-      {/* Horizontal scrollable container */}
-      <div className="flex overflow-x-auto space-x-6 px-4 scrollbar-hide items-center">
+      {/* Scrollable container */}
+      <div className="flex overflow-x-auto hide-scrollbar space-x-4 px-4 items-center snap-x snap-mandatory">
         {bands.map((band) => (
           <div
             key={band.id}
-            className="w-[190px] h-[60px] bg-[#101010] rounded-[16px] flex items-center justify-center"
+            className="flex-shrink-0 w-[180px] h-[60px] bg-[#101010] rounded-[16px] flex items-center justify-center snap-center"
           >
-            <div className="relative w-[80%] h-[100%]">
+            <div className="relative w-[80%] h-[50px]">
               <Image
                 src={band.src}
                 alt={band.alt}
-                layout="fill" // Ensures the image fills the parent container
-                objectFit="contain" // Ensures the image fits nicely within the container
+                layout="fill"
+                objectFit="contain"
                 className="rounded-lg"
               />
             </div>
