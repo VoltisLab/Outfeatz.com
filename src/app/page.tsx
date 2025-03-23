@@ -1,9 +1,11 @@
-import CreativeWorkflowSection from "@/components/sections/creativeWork";
 import FashionSection from "@/components/sections/fashion";
 import Featured from "@/components/sections/featured";
-import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
 import Showcase from "@/components/sections/showcase";
+import Playground from "@/components/sections/playground";
+import Footer from "@/components/sections/footer";
+
+
 
 
 export default function Home() {
@@ -13,7 +15,7 @@ export default function Home() {
     <Featured/>
     <Showcase/>
     <FashionSection/>
-    <CreativeWorkflowSection/>
+    <Playground/>
     <Footer/>
     </div>
   );
