@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
@@ -11,7 +11,7 @@ const Playground = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (sectionRef.current) {
@@ -27,22 +27,22 @@ const Playground = () => {
 
   return (
     <div
-    ref={sectionRef}
-    className="w-full h-[1072px] mx-auto bg-black text-white text-left px-6 md:px-16 relative overflow-hidden"
-  >
-    <style jsx>{`
-      @keyframes scroll {
-        0% {
-          transform: translateX(-30%);
+      ref={sectionRef}
+      className="w-full h-[1072px] mx-auto bg-black text-white text-left px-6 md:px-16 relative overflow-hidden"
+    >
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(-30%);
+          }
+          100% {
+            transform: translateX(0%);
+          }
         }
-        100% {
-          transform: translateX(0%);
+        .animate-scroll {
+          animation: scroll 12s ease-in-out alternate infinite;
         }
-      }
-      .animate-scroll {
-      animation: scroll 12s ease-in-out alternate infinite;
-      }
-    `}</style>
+      `}</style>
 
       {/* Text Area */}
       <div className="flex justify-start">
@@ -52,110 +52,203 @@ const Playground = () => {
             <span className="text-white"> Experience</span> Workflow
           </p>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            <span className="text-blue-400">The Ultimate Style <br /> Playground</span>
+            <span className="text-blue-400">
+              The Ultimate Style <br /> Playground
+            </span>
           </h1>
         </header>
       </div>
 
       {/* Scrolling Container */}
-      <div className={`flex gap-6 ${isVisible? "animate-scroll" : "reset-scroll"}`}>
+      <div
+        className={`flex gap-6 ${isVisible ? "animate-scroll" : "reset-scroll"}`}
+      >
         <div className="flex space-x-6">
-        <div className="grid grid-cols-5 gap-6 absolute w-[1686px] right-[-140px] left-[-121px] mx-auto">
-        {/* Column 1 - Left Gallery */}
-        <div className="flex flex-col items-center space-y-8">
-          <Image src="/denim1.png" alt="Gallery Left" width={300} height={400} 
-            className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
-          <Image src="/denim2.png" alt="Gallery Left" width={300} height={400} 
-            className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
-        </div>
-
-        {/* Column 2 - Before/After Section */}
-        <div className="flex flex-col items-center text-center mt-35 gap-35">
-          <div className="grid grid-cols-2 gap-4 bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg p-4">
-            <h1 className="text-left text-blue-400">Before</h1>
-            <h1 className="text-left text-white">After</h1>
-            <div className="space-y-4">
-              <Image src="/before1.jfif" alt="Before Image 1" width={119} height={92} className="w-[119px] h-[92px] object-cover rounded-2xl" />
-              <Image src="/before2.png" alt="Before Image 2" width={119} height={171} className="w-[119px] h-[171px] object-cover rounded-2xl" />
-            </div>
-            <div className="space-y-4">
-              <Image src="/after1.png" alt="After Image 1" width={119} height={171} className="w-[119px] h-[171px] object-cover border border-gray-500 rounded-2xl" />
-              <Image src="/after2.png" alt="After Image 2" width={119} height={92} className="w-[119px] h-[92px] object-cover border border-gray-500 rounded-2xl" />
-            </div>
-          </div>
-
-          {/* Store Buttons */}
-          <div className="flex justify-center space-x-4">
-            <a href="#">
-              <img src="/google.png" alt="Google Play" className="h-12" />
-            </a>
-          </div>
-        </div>
-
-        {/* Column 3 - Middle Image Section */}
-        <div className="flex flex-col items-center">
-          <div className="bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg w-[312px] h-[213px] flex justify-center items-center p-1">
-            <Image src="/denim2.png" alt="Fashion Image" width={302} height={189} className="w-[302px] h-[189px] object-contain" />
-          </div>
-
-          <div className="w-[312px] h-[213px] flex justify-center items-center p-1 -mt-1">
-            <Image src="/notion.png" alt="Roadmap Planning" width={315} height={67} className="w-[315px] h-[67px] object-contain" />
-          </div>
-
-          <div className="flex flex-col p-3 w-[312px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg">
-            <div className="flex justify-center gap-1.5 mb-2">
-              {[...Array(4)].map((_, index) => (
-                <Image key={index} src={`/style${index + 1}.png`} alt="Styled Image" width={58} height={92} className="w-[58px] h-[92px] object-contain" />
-              ))}
+          <div className="grid grid-cols-5 gap-6 absolute w-[1686px] right-[-140px] left-[-121px] mx-auto">
+            {/* Column 1 - Left Gallery */}
+            <div className="flex flex-col items-center space-y-8">
+              <Image
+                src="/denim1.png"
+                alt="Gallery Left"
+                width={300}
+                height={400}
+                className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg"
+              />
+              <Image
+                src="/denim2.png"
+                alt="Gallery Left"
+                width={300}
+                height={400}
+                className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg"
+              />
             </div>
 
-            <div className="text-center space-y-1.5 p-2">
-              <p className="text-[18px] font-bold tracking-[1px] text-left">
-                Fashion is more than just what you wear it's a statement, a collection of moments, a reflection of who you are.
-              </p>
-              <p className="text-blue-400 text-left font-bold tracking-[1px]">
-                With Outfeatz, turn your best outfit shots into stunning, cut-out digital galleries that let your style shine like never before.
-              </p>
+            {/* Column 2 - Before/After Section */}
+            <div className="flex flex-col items-center text-center mt-35 gap-35">
+              <div className="grid grid-cols-2 gap-4 bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg p-4">
+                <h1 className="text-left text-blue-400">Before</h1>
+                <h1 className="text-left text-white">After</h1>
+                <div className="space-y-4">
+                  <Image
+                    src="/before1.jfif"
+                    alt="Before Image 1"
+                    width={119}
+                    height={92}
+                    className="w-[119px] h-[92px] object-cover rounded-2xl"
+                  />
+                  <Image
+                    src="/before2.png"
+                    alt="Before Image 2"
+                    width={119}
+                    height={171}
+                    className="w-[119px] h-[171px] object-cover rounded-2xl"
+                  />
+                </div>
+                <div className="space-y-4">
+                  <Image
+                    src="/after1.png"
+                    alt="After Image 1"
+                    width={119}
+                    height={171}
+                    className="w-[119px] h-[171px] object-cover border border-gray-500 rounded-2xl"
+                  />
+                  <Image
+                    src="/after2.png"
+                    alt="After Image 2"
+                    width={119}
+                    height={92}
+                    className="w-[119px] h-[92px] object-cover border border-gray-500 rounded-2xl"
+                  />
+                </div>
+              </div>
+
+              {/* Store Buttons */}
+              <div className="flex justify-center space-x-4">
+                <a href="#">
+                  <img src="/google.png" alt="Google Play" className="h-12" />
+                </a>
+              </div>
             </div>
 
-          </div>
-        </div>
+            {/* Column 3 - Middle Image Section */}
+            <div className="flex flex-col items-center">
+              <div className="bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg w-[312px] h-[213px] flex justify-center items-center p-1">
+                <Image
+                  src="/denim2.png"
+                  alt="Fashion Image"
+                  width={302}
+                  height={189}
+                  className="w-[302px] h-[189px] object-contain"
+                />
+              </div>
 
-        {/* Column 4 - Before/After Section */}
-        <div className="flex flex-col items-center text-center mt-35 gap-35">
-          <div className="grid grid-cols-2 gap-4 bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg p-4">
-            <h1 className="text-left text-blue-400">Before</h1>
-            <h1 className="text-left text-white">After</h1>
-            <div className="space-y-4">
-              <Image src="/left1.jfif" alt="Before Image 1" width={119} height={92} className="w-[119px] h-[92px] object-cover rounded-2xl" />
-              <Image src="/left3.png" alt="Before Image 2" width={119} height={171} className="w-[119px] h-[171px] object-cover rounded-2xl" />
+              <div className="w-[312px] h-[213px] flex justify-center items-center p-1 -mt-1">
+                <Image
+                  src="/notion.png"
+                  alt="Roadmap Planning"
+                  width={315}
+                  height={67}
+                  className="w-[315px] h-[67px] object-contain"
+                />
+              </div>
+
+              <div className="flex flex-col p-3 w-[312px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg">
+                <div className="flex justify-center gap-1.5 mb-2">
+                  {[...Array(4)].map((_, index) => (
+                    <Image
+                      key={index}
+                      src={`/style${index + 1}.png`}
+                      alt="Styled Image"
+                      width={58}
+                      height={92}
+                      className="w-[58px] h-[92px] object-contain"
+                    />
+                  ))}
+                </div>
+
+                <div className="text-center space-y-1.5 p-2">
+                  <p className="text-[18px] font-bold tracking-[1px] text-left">
+                    Fashion is more than just what you wear it&apos;s a statement, a
+                    collection of moments, a reflection of who you are.
+                  </p>
+                  <p className="text-blue-400 text-left font-bold tracking-[1px]">
+                    With Outfeatz, turn your best outfit shots into stunning,
+                    cut-out digital galleries that let your style shine like
+                    never before.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="space-y-4">
-              <Image src="/left2.png" alt="After Image 1" width={119} height={171} className="w-[119px] h-[171px] object-cover border border-gray-500 rounded-2xl" />
-              <Image src="/left4.png" alt="After Image 2" width={119} height={92} className="w-[119px] h-[92px] object-cover border border-gray-500 rounded-2xl" />
+
+            {/* Column 4 - Before/After Section */}
+            <div className="flex flex-col items-center text-center mt-35 gap-35">
+              <div className="grid grid-cols-2 gap-4 bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg p-4">
+                <h1 className="text-left text-blue-400">Before</h1>
+                <h1 className="text-left text-white">After</h1>
+                <div className="space-y-4">
+                  <Image
+                    src="/left1.jfif"
+                    alt="Before Image 1"
+                    width={119}
+                    height={92}
+                    className="w-[119px] h-[92px] object-cover rounded-2xl"
+                  />
+                  <Image
+                    src="/left3.png"
+                    alt="Before Image 2"
+                    width={119}
+                    height={171}
+                    className="w-[119px] h-[171px] object-cover rounded-2xl"
+                  />
+                </div>
+                <div className="space-y-4">
+                  <Image
+                    src="/left2.png"
+                    alt="After Image 1"
+                    width={119}
+                    height={171}
+                    className="w-[119px] h-[171px] object-cover border border-gray-500 rounded-2xl"
+                  />
+                  <Image
+                    src="/left4.png"
+                    alt="After Image 2"
+                    width={119}
+                    height={92}
+                    className="w-[119px] h-[92px] object-cover border border-gray-500 rounded-2xl"
+                  />
+                </div>
+              </div>
+
+              {/* Store Buttons */}
+              <div className="flex justify-center space-x-4">
+                <a href="#">
+                  <img src="/apple.png" alt="App Store" className="h-12" />
+                </a>
+              </div>
+            </div>
+
+            {/* Column 5 - Right Gallery */}
+            <div className="flex flex-col items-center space-y-8">
+              <div className="w-[312px] h-[448px]">
+                <Image
+                  src="/denim1.png"
+                  alt="Gallery Right"
+                  width={312}
+                  height={408}
+                  className="w-[312px] h-[408px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg"
+                />
+              </div>
+              <div className="w-[312px] h-[213px]">
+                <Image
+                  src="/denim2.png"
+                  alt="Gallery Right"
+                  width={302}
+                  height={189}
+                  className="w-[302px] h-[189px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg"
+                />
+              </div>
             </div>
           </div>
-
-          {/* Store Buttons */}
-          <div className="flex justify-center space-x-4">
-            <a href="#">
-              <img src="/apple.png" alt="App Store" className="h-12" />
-            </a>
-          </div>
-        </div>
-
-        {/* Column 5 - Right Gallery */}
-        <div className="flex flex-col items-center space-y-8">
-          <div className="w-[312px] h-[448px]">
-            <Image src="/denim1.png" alt="Gallery Right" width={312} height={408} 
-            className="w-[312px] h-[408px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
-          </div>
-          <div className="w-[312px] h-[213px]">
-            <Image src="/denim2.png" alt="Gallery Right" width={302} height={189} 
-            className="w-[302px] h-[189px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
-          </div>
-        </div>
-      </div>
         </div>
       </div>
     </div>
