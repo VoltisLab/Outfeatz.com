@@ -1,12 +1,53 @@
+'use client'
 import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 
 const Playground = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="w-[1686px] h-[1072px] top-[4820px] left-[-121px] mx-auto bg-black text-white text-left px-6 md:px-16">
+    <div
+    ref={sectionRef}
+    className="w-full h-[1072px] mx-auto bg-black text-white text-left px-6 md:px-16 relative overflow-hidden"
+  >
+    <style jsx>{`
+      @keyframes scroll {
+        0% {
+          transform: translateX(-30%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+      .animate-scroll {
+      animation: scroll 12s ease-in-out alternate infinite;
+      }
+    `}</style>
+
       {/* Text Area */}
       <div className="flex justify-start">
         <header className="py-10">
-          <p className="text-blue-400 font-semibold text-lg md:text-xl gap-2 flex items-center">
+          <p className="text-blue-400 font-semibold text-lg md:text-xl flex items-center">
             <img src="star.png" alt="Star" className="w-5 h-5 mr-2" />
             <span className="text-white"> Experience</span> Workflow
           </p>
@@ -16,12 +57,15 @@ const Playground = () => {
         </header>
       </div>
 
-      <div className="grid grid-cols-5 gap-6 absolute w-[1686px] right-[-140px] left-[-121px] mx-auto">
+      {/* Scrolling Container */}
+      <div className={`flex gap-6 ${isVisible? "animate-scroll" : "reset-scroll"}`}>
+        <div className="flex space-x-6">
+        <div className="grid grid-cols-5 gap-6 absolute w-[1686px] right-[-140px] left-[-121px] mx-auto">
         {/* Column 1 - Left Gallery */}
         <div className="flex flex-col items-center space-y-8">
           <Image src="/denim1.png" alt="Gallery Left" width={300} height={400} 
             className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
-          <Image src="/style1.png" alt="Gallery Left" width={300} height={400} 
+          <Image src="/denim2.png" alt="Gallery Left" width={300} height={400} 
             className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
         </div>
 
@@ -51,7 +95,7 @@ const Playground = () => {
         {/* Column 3 - Middle Image Section */}
         <div className="flex flex-col items-center">
           <div className="bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg w-[312px] h-[213px] flex justify-center items-center p-1">
-            <Image src="/style1.png" alt="Fashion Image" width={302} height={189} className="w-[302px] h-[189px] object-contain" />
+            <Image src="/denim2.png" alt="Fashion Image" width={302} height={189} className="w-[302px] h-[189px] object-contain" />
           </div>
 
           <div className="w-[312px] h-[213px] flex justify-center items-center p-1 -mt-1">
@@ -64,6 +108,7 @@ const Playground = () => {
                 <Image key={index} src={`/style${index + 1}.png`} alt="Styled Image" width={58} height={92} className="w-[58px] h-[92px] object-contain" />
               ))}
             </div>
+
             <div className="text-center space-y-1.5 p-2">
               <p className="text-[18px] font-bold tracking-[1px] text-left">
                 Fashion is more than just what you wear it's a statement, a collection of moments, a reflection of who you are.
@@ -72,6 +117,7 @@ const Playground = () => {
                 With Outfeatz, turn your best outfit shots into stunning, cut-out digital galleries that let your style shine like never before.
               </p>
             </div>
+
           </div>
         </div>
 
@@ -105,9 +151,11 @@ const Playground = () => {
             className="w-[312px] h-[408px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
           </div>
           <div className="w-[312px] h-[213px]">
-            <Image src="/style1.png" alt="Gallery Right" width={302} height={189} 
+            <Image src="/denim2.png" alt="Gallery Right" width={302} height={189} 
             className="w-[302px] h-[189px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
           </div>
+        </div>
+      </div>
         </div>
       </div>
     </div>
