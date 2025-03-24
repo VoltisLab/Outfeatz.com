@@ -19,8 +19,10 @@ const Playground = () => {
       <div className="grid grid-cols-5 gap-6 absolute w-[1686px] right-[-140px] left-[-121px] mx-auto">
         {/* Column 1 - Left Gallery */}
         <div className="flex flex-col items-center space-y-8">
-          <Image src="/denim1.png" alt="Gallery Left" width={300} height={400} className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
-          <Image src="/style1.png" alt="Gallery Left" width={300} height={400} className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
+          <Image src="/denim1.png" alt="Gallery Left" width={300} height={400} 
+            className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
+          <Image src="/style1.png" alt="Gallery Left" width={300} height={400} 
+            className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
         </div>
 
         {/* Column 2 - Before/After Section */}
@@ -64,7 +66,7 @@ const Playground = () => {
             </div>
             <div className="text-center space-y-1.5 p-2">
               <p className="text-[18px] font-bold tracking-[1px] text-left">
-                Fashion is more than just what you wear – it's a statement, a collection of moments, a reflection of who you are.
+                Fashion is more than just what you wear it's a statement, a collection of moments, a reflection of who you are.
               </p>
               <p className="text-blue-400 text-left font-bold tracking-[1px]">
                 With Outfeatz, turn your best outfit shots into stunning, cut-out digital galleries that let your style shine like never before.
@@ -99,10 +101,12 @@ const Playground = () => {
         {/* Column 5 - Right Gallery */}
         <div className="flex flex-col items-center space-y-8">
           <div className="w-[312px] h-[448px]">
-            <Image src="/denim1.png" alt="Gallery Right" width={312} height={408} className="w-[312px] h-[408px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
+            <Image src="/denim1.png" alt="Gallery Right" width={312} height={408} 
+            className="w-[312px] h-[408px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
           </div>
           <div className="w-[312px] h-[213px]">
-            <Image src="/style1.png" alt="Gallery Right" width={302} height={189} className="w-[302px] h-[189px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
+            <Image src="/style1.png" alt="Gallery Right" width={302} height={189} 
+            className="w-[302px] h-[189px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg" />
           </div>
         </div>
       </div>
