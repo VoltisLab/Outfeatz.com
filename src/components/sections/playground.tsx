@@ -187,7 +187,7 @@ const Playground = () => {
                 <h1 className="text-left text-white">After</h1>
                 <div className="space-y-4">
                   <Image
-                    src="/left1.jpg"
+                    src="/left1.png"
                     alt="Before Image 1"
                     width={119}
                     height={92}
