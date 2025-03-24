@@ -4,24 +4,23 @@ import { useState, useEffect, useRef } from "react";
 
 const Playground = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
-    const currentRef = sectionRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
       }
     };
   }, []);
@@ -49,7 +48,7 @@ const Playground = () => {
       <div className="flex justify-start">
         <header className="py-10">
           <p className="text-blue-400 font-semibold text-lg md:text-xl flex items-center">
-            <img src="star.png" alt="Star Icon" className="w-5 h-5 mr-2" />
+            <img src="star.png" alt="Star" className="w-5 h-5 mr-2" />
             <span className="text-white"> Experience</span> Workflow
           </p>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -61,21 +60,23 @@ const Playground = () => {
       </div>
 
       {/* Scrolling Container */}
-      <div className={`flex gap-6 ${isVisible ? "animate-scroll" : ""}`}>
+      <div
+        className={`flex gap-6 ${isVisible ? "animate-scroll" : "reset-scroll"}`}
+      >
         <div className="flex space-x-6">
           <div className="grid grid-cols-5 gap-6 absolute w-[1686px] right-[-140px] left-[-121px] mx-auto">
             {/* Column 1 - Left Gallery */}
             <div className="flex flex-col items-center space-y-8">
               <Image
                 src="/denim1.png"
-                alt="Denim 1"
+                alt="Gallery Left"
                 width={300}
                 height={400}
                 className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg"
               />
               <Image
                 src="/denim2.png"
-                alt="Denim 2"
+                alt="Gallery Left"
                 width={300}
                 height={400}
                 className="w-full max-w-md bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg"
@@ -90,14 +91,14 @@ const Playground = () => {
                 <div className="space-y-4">
                   <Image
                     src="/before1.jfif"
-                    alt="Before 1"
+                    alt="Before Image 1"
                     width={119}
                     height={92}
                     className="w-[119px] h-[92px] object-cover rounded-2xl"
                   />
                   <Image
                     src="/before2.png"
-                    alt="Before 2"
+                    alt="Before Image 2"
                     width={119}
                     height={171}
                     className="w-[119px] h-[171px] object-cover rounded-2xl"
@@ -106,14 +107,14 @@ const Playground = () => {
                 <div className="space-y-4">
                   <Image
                     src="/after1.png"
-                    alt="After 1"
+                    alt="After Image 1"
                     width={119}
                     height={171}
                     className="w-[119px] h-[171px] object-cover border border-gray-500 rounded-2xl"
                   />
                   <Image
                     src="/after2.png"
-                    alt="After 2"
+                    alt="After Image 2"
                     width={119}
                     height={92}
                     className="w-[119px] h-[92px] object-cover border border-gray-500 rounded-2xl"
@@ -134,11 +135,48 @@ const Playground = () => {
               <div className="bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg w-[312px] h-[213px] flex justify-center items-center p-1">
                 <Image
                   src="/denim2.png"
-                  alt="Fashion"
+                  alt="Fashion Image"
                   width={302}
                   height={189}
                   className="w-[302px] h-[189px] object-contain"
                 />
+              </div>
+
+              <div className="w-[312px] h-[213px] flex justify-center items-center p-1 -mt-1">
+                <Image
+                  src="/notion.png"
+                  alt="Roadmap Planning"
+                  width={315}
+                  height={67}
+                  className="w-[315px] h-[67px] object-contain"
+                />
+              </div>
+
+              <div className="flex flex-col p-3 w-[312px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg">
+                <div className="flex justify-center gap-1.5 mb-2">
+                  {[...Array(4)].map((_, index) => (
+                    <Image
+                      key={index}
+                      src={`/style${index + 1}.png`}
+                      alt="Styled Image"
+                      width={58}
+                      height={92}
+                      className="w-[58px] h-[92px] object-contain"
+                    />
+                  ))}
+                </div>
+
+                <div className="text-center space-y-1.5 p-2">
+                  <p className="text-[18px] font-bold tracking-[1px] text-left">
+                    Fashion is more than just what you wear it&apos;s a statement, a
+                    collection of moments, a reflection of who you are.
+                  </p>
+                  <p className="text-blue-400 text-left font-bold tracking-[1px]">
+                    With Outfeatz, turn your best outfit shots into stunning,
+                    cut-out digital galleries that let your style shine like
+                    never before.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -150,14 +188,14 @@ const Playground = () => {
                 <div className="space-y-4">
                   <Image
                     src="/left1.jfif"
-                    alt="Left Before 1"
+                    alt="Before Image 1"
                     width={119}
                     height={92}
                     className="w-[119px] h-[92px] object-cover rounded-2xl"
                   />
                   <Image
                     src="/left3.png"
-                    alt="Left Before 2"
+                    alt="Before Image 2"
                     width={119}
                     height={171}
                     className="w-[119px] h-[171px] object-cover rounded-2xl"
@@ -166,14 +204,14 @@ const Playground = () => {
                 <div className="space-y-4">
                   <Image
                     src="/left2.png"
-                    alt="Left After 1"
+                    alt="After Image 1"
                     width={119}
                     height={171}
                     className="w-[119px] h-[171px] object-cover border border-gray-500 rounded-2xl"
                   />
                   <Image
                     src="/left4.png"
-                    alt="Left After 2"
+                    alt="After Image 2"
                     width={119}
                     height={92}
                     className="w-[119px] h-[92px] object-cover border border-gray-500 rounded-2xl"
@@ -191,20 +229,24 @@ const Playground = () => {
 
             {/* Column 5 - Right Gallery */}
             <div className="flex flex-col items-center space-y-8">
-              <Image
-                src="/denim1.png"
-                alt="Gallery Right 1"
-                width={312}
-                height={408}
-                className="w-[312px] h-[408px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg"
-              />
-              <Image
-                src="/denim2.png"
-                alt="Gallery Right 2"
-                width={302}
-                height={189}
-                className="w-[302px] h-[189px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg"
-              />
+              <div className="w-[312px] h-[448px]">
+                <Image
+                  src="/denim1.png"
+                  alt="Gallery Right"
+                  width={312}
+                  height={408}
+                  className="w-[312px] h-[408px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg"
+                />
+              </div>
+              <div className="w-[312px] h-[213px]">
+                <Image
+                  src="/denim2.png"
+                  alt="Gallery Right"
+                  width={302}
+                  height={189}
+                  className="w-[302px] h-[189px] bg-gradient-to-b from-[#282828] to-[#0D0D0D] rounded-2xl shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </div>
