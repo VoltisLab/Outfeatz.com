@@ -7,19 +7,7 @@ const FashionSection = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  return (
-    <><section className="bg-[#101010] my-20 rounded-[20px] text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center mt-20 md:mt-50 w-full overflow-hidden">
-          {/* Left Content */}
-          <div className="border-r-[4px] md:w-1/2">
-              <p className="text-[#36C5F0] text-[24px] mb-2">✦ Mobile experience</p>
-              <h2 className="text-4xl md:text-[75px] font-bold leading-tight">
-                  Seamless & Effortless, just Like Fashion Should Be
-              </h2>
-              <div className="flex flex-col space-y-3 mt-6">
-                  <Image objectFit="contain" src="/images/Apple.svg" alt="Google Play" width={150} height={50} />
-                  <Image objectFit="contain" src="/images/Google.svg" alt="App Store" width={150} height={50} />
-              </div>
-          </div>
+
 
   return (
     <>
