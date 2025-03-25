@@ -15,7 +15,7 @@ const FashionSection = () => {
       >
         {/* Left Content */}
         <motion.div
-          className="border-r-[4px] md:w-1/2"
+          className="md:border-r-[4px] md:w-1/2"
           initial={{ x: -100, opacity: 0 }}
           animate={isInView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1 }}
@@ -29,7 +29,7 @@ const FashionSection = () => {
             ✦ Mobile experience
           </motion.p>
           <motion.h2
-            className="text-4xl md:text-[75px] font-bold leading-tight"
+            className="text-2xl md:text-[75px] font-bold leading-tight"
             initial={{ y: -50, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ delay: 0.4, duration: 1 }}
@@ -89,8 +89,8 @@ const FashionSection = () => {
             >
               <span className="text-xl">{item.icon}</span>
               <div>
-                <h3 className="text-[#36C5F0] text-[24px] font-semibold">{item.title}</h3>
-                <p className="text-gray-300 text-[24px]">{item.description}</p>
+              <h3 className="text-[#36C5F0] text-lg md:text-[24px] font-semibold">{item.title}</h3>
+              <p className="text-gray-300 text-base md:text-[24px]">{item.description}</p>
               </div>
             </motion.div>
           ))}
