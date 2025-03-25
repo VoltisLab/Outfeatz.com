@@ -8,6 +8,20 @@ const FashionSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
+    <><section className="bg-[#101010] my-20 rounded-[20px] text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center mt-20 md:mt-50 w-full overflow-hidden">
+          {/* Left Content */}
+          <div className="border-r-[4px] md:w-1/2">
+              <p className="text-[#36C5F0] text-[24px] mb-2">✦ Mobile experience</p>
+              <h2 className="text-4xl md:text-[75px] font-bold leading-tight">
+                  Seamless & Effortless, just Like Fashion Should Be
+              </h2>
+              <div className="flex flex-col space-y-3 mt-6">
+                  <Image objectFit="contain" src="/images/Apple.svg" alt="Google Play" width={150} height={50} />
+                  <Image objectFit="contain" src="/images/Google.svg" alt="App Store" width={150} height={50} />
+              </div>
+          </div>
+
+  return (
     <>
       <section
         ref={ref}
@@ -92,6 +106,7 @@ const FashionSection = () => {
                 <h3 className="text-[#36C5F0] text-base md:text-lg font-semibold">{item.title}</h3>
                 <p className="text-gray-300 text-sm md:text-[22px] leading-relaxed">{item.description}</p>
               </div>
+
             </motion.div>
           ))}
         </motion.div>
@@ -114,6 +129,49 @@ const FashionSection = () => {
         />
       </motion.div>
     </>
+              <div className="flex items-start space-x-3">
+                  <span className="text-xl">🎨</span>
+                  <div>
+                      <h3 className="text-[#36C5F0] text-[24px] font-semibold">Build Your Digital Wardrobe</h3>
+                      <p className="text-gray-300 text-[24px]">
+                          Create, customise, and organise unlimited outfit galleries—categorise by season, occasion, mood, or your own unique style.
+                      </p>
+                  </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                  <span className="text-xl">💾</span>
+                  <div>
+                      <h3 className="text-[#36C5F0] text-[24px] font-semibold">Save & Sync Your Looks</h3>
+                      <p className="text-gray-300 text-[24px]">
+                          Keep your style safe. With Outfeatz Cloud Sync, your outfits are always at your fingertips.
+                      </p>
+                  </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                  <span className="text-xl">👗</span>
+                  <div>
+                      <h3 className="text-[#36C5F0] text-[24px] font-semibold">The Possibilities Are Endless</h3>
+                      <p className="text-gray-300 text-[24px]">
+                          From styling your next event to building a visual wardrobe, Outfeatz is your ultimate fashion tool.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </section> 
+      
+      <div className="relative w-full flex justify-center items-center pt-20">
+  <div className="w-full max-w-screen-xl px-4">
+    <Image
+      src="/images/bg-website-min-2.png"
+      alt="Hero Background"
+      width={1920}
+      height={1080}
+      layout="responsive"
+      objectFit="contain"
+      priority
+    />
+  </div>
+</div></>
   );
 };
 
