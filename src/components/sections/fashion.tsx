@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 const FashionSection = () => {
   return (
-    <><section className="bg-[#101010]   my-20 rounded-[20px] text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center mt-20 md:mt-50">
+    <><section className="bg-[#101010] my-20 rounded-[20px] text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center mt-20 md:mt-50 w-full overflow-hidden">
           {/* Left Content */}
           <div className="border-r-[4px] md:w-1/2">
               <p className="text-[#36C5F0] text-[24px] mb-2">✦ Mobile experience</p>
-              <h2 className="text-[75px] font-bold leading-tight">
+              <h2 className="text-4xl md:text-[75px] font-bold leading-tight">
                   Seamless & Effortless, just Like Fashion Should Be
               </h2>
               <div className="flex flex-col space-y-3 mt-6">
@@ -61,16 +61,19 @@ const FashionSection = () => {
           </div>
       </section> 
       
-      <div className="relative w-full pt-20"> {/* Offset nav and add padding */}
-              <Image
-                 src="/images/bg-website-min-2.png"
-                  alt="Hero Background"
-                  width={1920}
-                  height={1080}
-                  layout="responsive"
-                  objectFit="contain"
-                  priority />
-          </div></>
+      <div className="relative w-full flex justify-center items-center pt-20">
+  <div className="w-full max-w-screen-xl px-4">
+    <Image
+      src="/images/bg-website-min-2.png"
+      alt="Hero Background"
+      width={1920}
+      height={1080}
+      layout="responsive"
+      objectFit="contain"
+      priority
+    />
+  </div>
+</div></>
   );
 };
 

@@ -12,22 +12,23 @@ const Featured = () => {
   ];
 
   return (
-    <section className="w-full mt-30 mb-30  text-white">
+    <section className="mt-30 mb-30 text-white relative w-full overflow-hidden">
       {/* Heading */}
-      <h2 className="text-3xl my-10 mb-20 font-bold text-center ">Featured and seen in</h2>
+      <h2 className="text-3xl my-10 mb-20 font-bold text-center">Featured and seen in</h2>
 
-      {/* Scrollable container */}
-      <div className="flex justify-center overflow-x-auto hide-scrollbar space-x-4 px-4 items-center snap-x snap-mandatory">
+      {/* Dynamic Responsive Container */}
+      <div className="flex flex-wrap justify-center items-center gap-4 w-full px-4">
         {bands.map((band) => (
           <div
             key={band.id}
-            className="flex-shrink-0 w-[180px] h-[60px] bg-[#101010] rounded-[16px] flex items-center justify-center snap-center"
+            className="flex-grow max-w-[180px] min-w-[100px] h-[60px] bg-[#101010] rounded-[16px] flex items-center justify-center"
           >
-            <div className="relative w-[80%] h-[50px]">
+            <div className="relative flex items-center justify-center w-[80%] h-[50px]">
               <Image
                 src={band.src}
                 alt={band.alt}
-                layout="fill"
+                width={120}
+                height={50}
                 objectFit="contain"
                 className="rounded-lg"
               />
