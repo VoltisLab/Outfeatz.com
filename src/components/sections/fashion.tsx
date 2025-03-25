@@ -7,13 +7,11 @@ const FashionSection = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
 
-
-
   return (
     <>
       <section
         ref={ref}
-        className="bg-[#101010] my-20 md:rounded-[20px] text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center mt-20 md:mt-50 overflow-hidden"
+        className="bg-[#101010] my-20 rounded-[20px] text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center mt-20 md:mt-50 w-full overflow-hidden"
       >
         {/* Left Content */}
         <motion.div
@@ -23,7 +21,7 @@ const FashionSection = () => {
           transition={{ duration: 1 }}
         >
           <motion.p
-            className="text-[#36C5F0] text-sm md:text-base mb-2"
+            className="text-[#36C5F0] text-[24px] mb-2"
             initial={{ y: -20, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -31,7 +29,7 @@ const FashionSection = () => {
             ✦ Mobile experience
           </motion.p>
           <motion.h2
-            className="text-[40px] md:text-[60px] font-bold leading-tight"
+            className="text-4xl md:text-[75px] font-bold leading-tight"
             initial={{ y: -50, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ delay: 0.4, duration: 1 }}
@@ -89,77 +87,35 @@ const FashionSection = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.6 + index * 0.2, duration: 0.8 }}
             >
-              <span className="text-lg md:text-xl">{item.icon}</span>
+              <span className="text-xl">{item.icon}</span>
               <div>
-                <h3 className="text-[#36C5F0] text-base md:text-lg font-semibold">{item.title}</h3>
-                <p className="text-gray-300 text-sm md:text-[22px] leading-relaxed">{item.description}</p>
+                <h3 className="text-[#36C5F0] text-[24px] font-semibold">{item.title}</h3>
+                <p className="text-gray-300 text-[24px]">{item.description}</p>
               </div>
-
             </motion.div>
           ))}
         </motion.div>
       </section>
 
       <motion.div
-        className="relative w-full pt-20"
+        className="relative w-full flex justify-center items-center pt-20"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ delay: 1, duration: 1 }}
       >
-        <Image
-          src="/images/bg-website-min-2.png"
-          alt="Hero Background"
-          width={1920}
-          height={1080}
-          layout="responsive"
-          objectFit="contain"
-          priority
-        />
+        <div className="w-full max-w-screen-xl px-4">
+          <Image
+            src="/images/bg-website-min-2.png"
+            alt="Hero Background"
+            width={1920}
+            height={1080}
+            layout="responsive"
+            objectFit="contain"
+            priority
+          />
+        </div>
       </motion.div>
     </>
-              <div className="flex items-start space-x-3">
-                  <span className="text-xl">🎨</span>
-                  <div>
-                      <h3 className="text-[#36C5F0] text-[24px] font-semibold">Build Your Digital Wardrobe</h3>
-                      <p className="text-gray-300 text-[24px]">
-                          Create, customise, and organise unlimited outfit galleries—categorise by season, occasion, mood, or your own unique style.
-                      </p>
-                  </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                  <span className="text-xl">💾</span>
-                  <div>
-                      <h3 className="text-[#36C5F0] text-[24px] font-semibold">Save & Sync Your Looks</h3>
-                      <p className="text-gray-300 text-[24px]">
-                          Keep your style safe. With Outfeatz Cloud Sync, your outfits are always at your fingertips.
-                      </p>
-                  </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                  <span className="text-xl">👗</span>
-                  <div>
-                      <h3 className="text-[#36C5F0] text-[24px] font-semibold">The Possibilities Are Endless</h3>
-                      <p className="text-gray-300 text-[24px]">
-                          From styling your next event to building a visual wardrobe, Outfeatz is your ultimate fashion tool.
-                      </p>
-                  </div>
-              </div>
-          </div>
-      </section> 
-      
-      <div className="relative w-full flex justify-center items-center pt-20">
-  <div className="w-full max-w-screen-xl px-4">
-    <Image
-      src="/images/bg-website-min-2.png"
-      alt="Hero Background"
-      width={1920}
-      height={1080}
-      layout="responsive"
-      objectFit="contain"
-      priority
-    />
-  </div>
-</div></>
   );
 };
 

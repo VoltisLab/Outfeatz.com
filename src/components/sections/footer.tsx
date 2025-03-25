@@ -1,17 +1,44 @@
+'use client';
+import React from "react";
+import { motion } from "framer-motion";
+
 const Footer = () => {
   return (
-    <div className="relative w-full">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 w-full h-full bg-cover bg-center opacity-20 pb-15"
-        style={{ backgroundImage: "url('/bg.png')" }}
-      ></div>
+    <motion.div
+      className="relative w-full"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1.5, ease: "easeOut" }}
+    >
+      {/* Background Gradient */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-50"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.5 }}
+      ></motion.div>
 
       {/* Footer Content */}
-      <footer className="relative z-10 mx-auto py-12 px-6 md:px-8 text-white mt-12">
-        <div className="max-w-[1440px] flex flex-col md:flex-row justify-center items-center md:items-start gap-12">
-          
-          {/* Left - Main Heading & Subtext */}
+      <motion.footer
+        className="relative z-10 mx-auto py-12 px-6 md:px-8 text-white mt-12"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.3 }}
+      >
+        <motion.div
+          className="max-w-[1440px] flex flex-col md:flex-row justify-center items-center md:items-start gap-12"
+          animate={{
+            scale: [1, 1.05, 1],
+            y: [0, -10, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            repeatType: "mirror",
+            ease: "easeInOut",
+          }}
+        >
+          {/* Left Section */}
           <div className="max-w-md text-center md:text-left space-y-6">
             <p className="text-[#36C5F0] font-semibold text-lg md:text-xl flex items-center justify-center md:justify-start gap-2">
               <img src="star.png" alt="Star" className="w-5 h-5" /> Workflow
@@ -28,7 +55,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Right - Upload Box & No Gatekeeping Text */}
+          {/* Right Section */}
           <div className="w-full max-w-md bg-[#1a1a1a] p-6 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
             <p className="text-gray-400 text-lg font-medium mb-4 text-center">
               Upload a cutout album
@@ -65,11 +92,10 @@ const Footer = () => {
               favourite labels, and curate looks effortlessly.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Footer Links and Subscribe Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 mt-16">
-          {/* Left Section - Links */}
           <div className="text-sm text-gray-400 space-y-3 text-center md:text-left">
             <ul className="space-y-1 transition-transform duration-300 hover:scale-105">
               {["Home", "FAQ", "Careers", "Terms", "Privacy", "Voltis Labs"].map((link) => (
@@ -79,25 +105,24 @@ const Footer = () => {
               ))}
             </ul>
 
-            {/* Subscribe Button */}
-            <div className="w-48 h-10 bg-[#101010] rounded-full flex items-center justify-center mt-3">
+          {/* Subscribe Button */}
+           {/* Subscribe Button (Moved to the left) */}
+           <div className="w-48 h-10 bg-[#101010] rounded-full flex items-center justify-start pl-4 mt-3">
               <p className="text-gray-500">Subscribe</p>
             </div>
           </div>
 
-          {/* Right Section - App Store & Google Play */}
           <div className="flex flex-col items-center md:items-end gap-3">
             <img src="/apple.png" alt="App Store" className="w-32 h-auto transition-transform duration-300 hover:scale-105" />
             <img src="/google.png" alt="Google Play" className="w-32 h-auto transition-transform duration-300 hover:scale-105" />
           </div>
         </div>
 
-        {/* Centered Copyright */}
         <p className="mt-8 text-center text-sm md:text-base">
           © 2025 Voltis Labs. All rights reserved.
         </p>
-      </footer>
-    </div>
+      </motion.footer>
+    </motion.div>
   );
 };
 
