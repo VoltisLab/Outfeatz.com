@@ -16,7 +16,6 @@ const FashionSection = () => {
         {/* Left Content */}
         <motion.div
           className="border-transparent md:border-r-[4px] md:border-white md:w-1/2 pr-4 hide-border"
-          className="md:border-r-[4px] md:w-1/2"
           initial={{ x: -100, opacity: 0 }}
           animate={isInView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1 }}
