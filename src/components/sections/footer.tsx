@@ -94,8 +94,6 @@ const Footer = () => {
           </div>
         </motion.div>
 
-
-
 {/* Footer Links and Subscribe Section */}
 <div className="flex justify-between items-start gap-6 mt-26 flex-row">
   {/* Left Section - Footer Links & Subscribe (Always flex-col, always on the left) */}
