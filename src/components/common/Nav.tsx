@@ -11,21 +11,10 @@ import { motion, AnimatePresence } from "framer-motion";
 const Nav = () => {
   const links = [
     {
-      name: "Products",
+      name: "About Us",
       route: "/products",
       icon: <IoIosArrowDown />,
-    },
-    {
-      name: "Our Story",
-      route: "/our-story",
-      icon: <IoIosArrowDown />,
-    },
-    {
-      name: "Careers",
-      route: "/careers",
-      icon: <IoIosArrowDown />,
-    },
-   
+    }, 
   ];
 
   const router = useRouter();
@@ -133,7 +122,7 @@ const Nav = () => {
               onClick={() => setToggle(false)}
             />
             <motion.nav
-              className="nav-container bg-black py-[5rem] h-screen px-[2rem] w-[66%] fixed top-0 left-0 !z-[1000] text-white"
+              className="nav-container bg-[#181717] py-[5rem] h-screen px-[2rem] w-[50%] fixed top-0 left-0 !z-[1000] text-white"
               initial="hidden"
               animate="visible"
               exit="hidden"
