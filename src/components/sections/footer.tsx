@@ -94,31 +94,34 @@ const Footer = () => {
           </div>
         </motion.div>
 
-        {/* Footer Links and Subscribe Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 mt-16">
-          <div className="text-sm text-gray-400 space-y-3 text-center md:text-left">
-            <ul className="space-y-1 transition-transform duration-300 hover:scale-105">
-              {["Home", "FAQ", "Careers", "Terms", "Privacy", "Voltis Labs"].map((link) => (
-                <li key={link}>
-                  <a href="#" className="hover:text-white transition">{link}</a>
-                </li>
-              ))}
-            </ul>
 
-          {/* Subscribe Button */}
-           {/* Subscribe Button (Moved to the left) */}
-           <div className="w-48 h-10 bg-[#101010] rounded-full flex items-center justify-start pl-4 mt-3">
-              <p className="text-gray-500">Subscribe</p>
-            </div>
-          </div>
 
-          <div className="flex flex-col items-center md:items-end gap-3">
-            <img src="/apple.png" alt="App Store" className="w-32 h-auto transition-transform duration-300 hover:scale-105" />
-            <img src="/google.png" alt="Google Play" className="w-32 h-auto transition-transform duration-300 hover:scale-105" />
-          </div>
-        </div>
+{/* Footer Links and Subscribe Section */}
+<div className="flex justify-between items-start gap-6 mt-26 flex-row">
+  {/* Left Section - Footer Links & Subscribe (Always flex-col, always on the left) */}
+  <div className="text-sm text-gray-400 space-y-3 text-left flex flex-col">
+    <ul className="space-y-1 transition-transform duration-300 hover:scale-105 flex flex-col">
+      {["Home", "FAQ", "Careers", "Terms", "Privacy", "Voltis Labs"].map((link) => (
+        <li key={link}>
+          <a href="#" className="hover:text-white transition">{link}</a>
+        </li>
+      ))}
+    </ul>
 
-        <p className="mt-8 text-center text-sm md:text-base">
+    {/* Subscribe Button */}
+    <div className="w-48 h-10 bg-[#181717] rounded-full flex items-center justify-start pl-4 mt-3">
+      <p className="text-gray-500">Subscribe</p>
+    </div>
+  </div>
+
+  {/* Right Section - App Store and Google Play (Stays on right, always flex-col) */}
+  <div className="flex flex-col items-end gap-3">
+    <img src="/apple.png" alt="App Store" className="w-32 h-auto transition-transform duration-300 hover:scale-105" />
+    <img src="/google.png" alt="Google Play" className="w-32 h-auto transition-transform duration-300 hover:scale-105" />
+  </div>
+</div>
+
+        <p className="mt-15 text-center text-sm md:text-base">
           © 2025 Voltis Labs. All rights reserved.
         </p>
       </motion.footer>
