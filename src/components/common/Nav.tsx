@@ -4,16 +4,27 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosAppstore, IoIosConstruct, IoIosAlbums } from "react-icons/io";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+
 
 const Nav = () => {
   const links = [
     {
-      name: "About Us",
+      name: "Products",
       route: "/products",
-      icon: <IoIosArrowDown />,
+      icon: <IoIosAppstore />,
+    }, 
+    {
+      name: "Our Story",
+      route: "/our-story",
+      icon: <IoIosConstruct />,
+    }, 
+    {
+      name: "Careers",
+      route: "/products",
+      icon: <IoIosAlbums />,
     }, 
   ];
 
@@ -96,7 +107,7 @@ const Nav = () => {
       </nav>
 
       <div className="lg:flex hidden items-center gap-4">
-        <button className="bg-[#36C5F0B2] rounded-lg px-5 py-2 text-[.9rem] text-white">
+        <button className="bg-white rounded-lg px-5 py-2 text-[.9rem] font-bold text-gray-800">
           Join Beta
         </button>
       </div>
