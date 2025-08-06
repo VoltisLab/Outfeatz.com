@@ -15,8 +15,6 @@ export default function Last() {
         </div>
       </div>
 
-
-
       {/* Footer main content */}
       <div className="flex flex-col max-h-[726px] md:h-[526px] lg:h-[526px] bg-[#F1F1EF] text-black rounded-3xl px-5 md:px-8 lg:px-10 py-20 w-full">
   <div className="flex flex-col md:flex-row justify-between max-h-[726px] h-[726px] md:h-auto lg:h-[526px] items-start gap-12 md:gap-6 lg:gap-8 w-full">
