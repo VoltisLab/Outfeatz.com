@@ -46,7 +46,7 @@ const Playground = () => {
 
       {/* Text Area */}
       <div className="justify-center text-center mb-5">
-        <header className="w-full text-4xl md:text-5xl xl:text-[75px] font-bold font-satoshi leading-[-1.7px]">
+        <header className="w-full text-4xl md:text-5xl xl:text-[75px] font-bold leading-[-1.7px]">
         You already have style. 
         <br />
         We just help you see it

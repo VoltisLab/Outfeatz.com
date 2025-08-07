@@ -9,7 +9,7 @@ const Showcase = () => {
   return (
    <section
         ref={ref}
-        className="bg-white my-20 rounded-[20px] py-16 px-6 md:px-20 flex flex-col md:flex-row items-center mt-20 md:mt-50 w-full overflow-hidden"
+        className="bg-white mb-10 rounded-[20px] py-16 px-6 md:px-20 flex flex-col md:flex-row items-center mt-20 md:mt-50 w-full overflow-hidden"
       >
         {/* Left Content */}
         <motion.div
@@ -20,7 +20,7 @@ const Showcase = () => {
         >
           
           <motion.h2
-            className="text-2xl md:text-[75px] font-bold leading-tight"
+            className="text-2xl md:text-[88px] text-[#0A0909] font-bold leading-tight"
             initial={{ y: -50, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ delay: 0.4, duration: 1 }}
@@ -28,7 +28,7 @@ const Showcase = () => {
             From Closet Chaos to Style Clarity
           </motion.h2>
           <motion.p
-            className="text-[24px] mb-2"
+            className="text-[24px] text-[#0A0909] mb-2"
             initial={{ y: -20, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -90,8 +90,8 @@ const Showcase = () => {
             >
               <span className="text-xl">{item.icon}</span>
               <div>
-              <h3 className="text-lg md:text-[24px] font-semibold">{item.title}</h3>
-              <p className="text-base md:text-[24px]">{item.description}</p>
+              <h3 className="text-lg md:text-[24px] text-[#0A0909] font-semibold">{item.title}</h3>
+              <p className="text-base md:text-[24px] font-bold text-[#303030]">{item.description}</p>
               </div>
             </motion.div>
           ))}

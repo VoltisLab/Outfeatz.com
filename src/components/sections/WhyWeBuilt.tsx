@@ -2,7 +2,7 @@ import WhyCard from "./WhyCard";
 
 export default function WhyWeBuilt() {
   return (
-    <section className="bg-black py-16 flex flex-col items-center space-y-12 md:px-4">
+    <section className="bg-black pt-10 flex flex-col items-center gap-12 md:px-4">
       <h2 className="text-white text-2xl md:text-3xl font-bold text-center">
         Why did we build this?
       </h2>

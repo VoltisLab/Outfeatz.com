@@ -5,6 +5,9 @@ import Faster from "@/components/sections/Faster";
 import BetaScroller from "@/components/Beta";
 import Last from "@/components/Last";
 import WhyWeBuilt from "@/components/sections/WhyWeBuilt";
+import Footer from "@/components/sections/footer";
+import Featured from "@/components/sections/featured";
+import Showcase from "@/components/sections/showcase";
 
 export default function Home() {
   return (
@@ -16,12 +19,13 @@ export default function Home() {
         {/* <Featured /> */}
         <Faster />
         <WhyWeBuilt />
+        <Showcase />
         <BetaScroller />
         <Last />
         <BetaScroller />
-        {/* <Showcase /> */}
+     
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

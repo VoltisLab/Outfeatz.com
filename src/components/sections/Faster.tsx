@@ -45,7 +45,7 @@ const Hero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.3 }}
       >
-        <h1 className='xl:text-[60.91px] md:text-[40px] text-[20px] md:leading-[60px]'>
+        <h1 className='xl:text-[60.91px] md:text-[40px] text-[20px] md:leading-[60px] font-bold'>
         While other apps pile on 
 features you’ll never use, 
 we’ve stripped it back to what 
