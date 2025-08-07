@@ -13,7 +13,7 @@ const Nav = () => {
   const links = [
     {
       name: "Products",
-      route: "/products",
+      route: "/",
       icon: <IoIosAppstore />,
     }, 
     {
@@ -23,7 +23,7 @@ const Nav = () => {
     }, 
     {
       name: "Careers",
-      route: "/products",
+      route: "/careers",
       icon: <IoIosAlbums />,
     }, 
   ];
@@ -107,7 +107,7 @@ const Nav = () => {
       </nav>
 
       <div className="lg:flex hidden items-center gap-4">
-        <button className="bg-white rounded-lg px-5 py-2 text-[.9rem] font-bold text-gray-800">
+        <button className="bg-white rounded-lg px-5 py-2 cursor-pointer text-[.9rem] font-bold text-gray-800">
           Join Beta
         </button>
       </div>

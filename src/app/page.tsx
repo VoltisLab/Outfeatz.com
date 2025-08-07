@@ -23,7 +23,6 @@ export default function Home() {
         <BetaScroller />
         <Last />
         <BetaScroller />
-     
       </div>
       <Footer />
     </div>
