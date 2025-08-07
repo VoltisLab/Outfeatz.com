@@ -8,7 +8,6 @@ import { IoIosAppstore, IoIosConstruct, IoIosAlbums } from "react-icons/io";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-
 const Nav = () => {
   const links = [
     {
