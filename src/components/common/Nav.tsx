@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { IoIosAppstore, IoIosConstruct, IoIosAlbums } from "react-icons/io";
+import { IoIosAppstore, IoIosConstruct } from "react-icons/io";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
