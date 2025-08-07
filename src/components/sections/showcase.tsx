@@ -90,7 +90,7 @@ const Showcase = () => {
             >
               <span className="text-xl">{item.icon}</span>
               <div>
-              <h3 className="text-lg md:text-[24px] text-[#0A0909] font-semibold">{item.title}</h3>
+              <h3 className="text-lg md:text-[24px] text-[#0A0909] font-bold">{item.title}</h3>
               <p className="text-base md:text-[24px] font-bold text-[#303030]">{item.description}</p>
               </div>
             </motion.div>

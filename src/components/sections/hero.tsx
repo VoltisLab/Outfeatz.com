@@ -76,7 +76,7 @@ const Hero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.3 }}
       >
-        <h1 className='xl:text-[60.91px] md:text-[40px] text-[20px] xl:leading-[60px] font-bold'>
+        <h1 className='xl:text-[60.91px] md:text-[40px] text-[20px] tracking-[-0.62px] leading-[60px] font-bold'>
         According to The Cut, 
 the stress often comes from 
 decision fatigue, social pressure, 
