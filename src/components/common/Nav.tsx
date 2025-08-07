@@ -11,19 +11,14 @@ import { motion, AnimatePresence } from "framer-motion";
 const Nav = () => {
   const links = [
     {
-      name: "Products",
+      name: "Home",
       route: "/",
       icon: <IoIosAppstore />,
     }, 
     {
-      name: "Our Story",
-      route: "/our-story",
+      name: "About Us",
+      route: "/about-us",
       icon: <IoIosConstruct />,
-    }, 
-    {
-      name: "Careers",
-      route: "/careers",
-      icon: <IoIosAlbums />,
     }, 
   ];
 
