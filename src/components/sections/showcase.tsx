@@ -28,7 +28,7 @@ const Showcase = () => {
             From Closet Chaos to Style Clarity
           </motion.h2>
           <motion.p
-            className="text-[24px] text-[#0A0909] mb-2"
+            className="text-[24px] text-[#0A0909] mb-2 font-bold"
             initial={{ y: -20, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -91,7 +91,7 @@ const Showcase = () => {
               <span className="text-xl">{item.icon}</span>
               <div>
               <h3 className="text-lg md:text-[24px] text-[#0A0909] font-bold">{item.title}</h3>
-              <p className="text-base md:text-[24px] font-bold text-[#303030]">{item.description}</p>
+              <p className="text-base md:text-[24px] font-bold text-[#0A0909] leading-[41px] tracking-[-0.24px]">{item.description}</p>
               </div>
             </motion.div>
           ))}
