@@ -9,18 +9,18 @@ const Showcase = () => {
   return (
    <section
         ref={ref}
-        className="bg-white mb-10 rounded-[20px] py-16 px-6 xl:px-20 flex flex-col md:flex-row text-start xl:items-center mt-20 w-full overflow-hidden"
+        className="bg-white mb-10 rounded-[20px] py-16 px-5 xl:px-20 flex flex-col md:flex-row text-start xl:items-center mt-20 w-full overflow-hidden xl:gap-5"
       >
         {/* Left Content */}
         <motion.div
-          className="border-transparent md:border-r-[4px] md:border-white md:w-1/2 xl: pr-4 hide-border"
+          className="md:w-1/2"
           initial={{ x: -100, opacity: 0 }}
           animate={isInView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1 }}
         >
           
           <motion.h2
-            className="text-[48px] xl:text-[88px] md:text-[68px] text-[#0A0909] font-bold leading-tight"
+            className="text-[40px] xl:text-[88px] md:text-[48px] text-[#0A0909] font-bold leading-tight"
             initial={{ y: -50, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ delay: 0.4, duration: 1 }}
@@ -91,7 +91,7 @@ const Showcase = () => {
               <span className="text-xl mt-1">{item.icon}</span>
               <div>
               <h3 className=" md:text-[20px] xl:text-[24px] text-[#0A0909] font-bold">{item.title}</h3>
-              <p className=" md:text-[20px] xl:text-[24px] font-bold text-[#0A0909] leading-[41px] tracking-[-0.24px]">{item.description}</p>
+              <p className=" md:text-[20px] xl:text-[24px] font-bold text-[#0A0909] md:leading-[41px] tracking-[-0.24px]">{item.description}</p>
               </div>
             </motion.div>
           ))}
