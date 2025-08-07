@@ -28,7 +28,7 @@ const Playground = () => {
   return (
     <div
       ref={sectionRef}
-      className="w-full xl:h-[1272px] h-[1000px] mx-auto bg-black text-white text-left px-6 md:px-16 relative overflow-hidden xl:mt-0 mt-24"
+      className="w-full md:h-[1050px] h-[1000px] mx-auto bg-black text-white text-left px-6 md:px-16 relative overflow-hidden xl:mt-16 mt-24"
     >
       <style jsx>{`
         @keyframes scroll {
@@ -45,7 +45,7 @@ const Playground = () => {
       `}</style>
 
       {/* Text Area */}
-      <div className="justify-center text-center mb-5">
+      <div className="justify-center text-center mb-10">
         <header className="w-full text-[35px] md:text-[55px] xl:text-[75px] font-bold leading-[88px] tracking-[-1.76px]">
         You already have style. 
         <br />
@@ -105,17 +105,7 @@ const Playground = () => {
                 </p>
               </div>
             </div>
-
-            <div className="flex flex-row gap-5 items-center pt-12">
-            <div className="flex justify-center space-x-4">
-                <a href="#"><img src="/google.png" alt="Google Play" className="h-12" /></a>
-              </div>
-            <div className="flex justify-center space-x-4">
-                <a href="#"><img src="/apple.png" alt="App Store" className="h-12" /></a>
-              </div>
-            </div>
-
-            </div>
+           </div>
 
             {/* Column 4 - Before/After Section */}
             <div className="flex flex-col items-center text-center mt-35 gap-35">

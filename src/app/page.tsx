@@ -8,12 +8,14 @@ import WhyWeBuilt from "@/components/sections/WhyWeBuilt";
 import Footer from "@/components/sections/footer";
 // import Featured from "@/components/sections/featured";
 import Showcase from "@/components/sections/showcase";
+import Links from "@/components/Links";
 
 export default function Home() {
   return (
     <div className="bg-black w-full min-h-screen">
-      <div className="max-w-[var(--max-width)] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen mx-auto px-4 sm:px-6 lg:px-8">
       <Playground />
+      <Links />
         <Hero />
         <FashionSection />
         {/* <Featured /> */}

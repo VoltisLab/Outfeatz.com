@@ -62,7 +62,7 @@ const Nav = () => {
 
   return (
     <div
-      className={`page-container md:static fixed top-0 left-0 z-30 backdrop-blur-sm  md:px-[4rem] px-[1rem] ${navBackground} min-h-[5rem] w-full flex items-center justify-between transition-colors duration-300`}
+      className={`page-container xl:static fixed top-0 left-0 z-30 backdrop-blur-sm  xl:px-[4rem] px-[1rem] ${navBackground} min-h-[5rem] w-full flex items-center justify-between transition-colors duration-300`}
     >
      <div className="">
   <motion.div
@@ -91,7 +91,7 @@ const Nav = () => {
 </div>
 
       {/* desktop links */}
-      <nav className="nav-container lg:flex gap-6 hidden items-center">
+      <nav className="nav-container xl:flex gap-6 hidden items-center">
         {links.map((item) => (
           <Link
             href={item.route}
@@ -105,7 +105,7 @@ const Nav = () => {
         ))}
       </nav>
 
-      <div className="lg:flex hidden items-center gap-4">
+      <div className="xl:flex hidden items-center gap-4">
         <button className="bg-white rounded-lg px-5 py-2 cursor-pointer text-[.9rem] font-bold text-gray-800">
           Join Beta
         </button>
@@ -113,7 +113,7 @@ const Nav = () => {
 
       <section
         onClick={() => setToggle(true)}
-        className="burger-container lg:hidden block"
+        className="burger-container xl:hidden block"
       >
         <RxHamburgerMenu size={25} color="white" />
       </section>
@@ -123,7 +123,7 @@ const Nav = () => {
         {toggle && (
           <>
             <motion.div
-              className="section-container top-0 absolute md:hidden h-screen bg-black/70 backdrop-blur-lg z-20 left-0 block w-full"
+              className="section-container top-0 absolute xl:hidden h-screen bg-black/70 backdrop-blur-lg z-20 left-0 block w-full"
               initial="hidden"
               animate="visible"
               exit="hidden"

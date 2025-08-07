@@ -7,7 +7,7 @@ export default function Last() {
     <footer className="bg-black text-white md:px-16 py-20 flex flex-col gap-12 w-full">
       {/* Social section */}
       <div className="text-center space-y-4 max-w-5xl mx-auto flex flex-col w-full">
-        <h2 className="text-2xl md:text-4xl font-bold">Keep up with us on socials:</h2>
+        <h2 className="md:text-[35px] text-[25px] md:text-[50px] leading-[62px] tracking-[-1.24px] font-bold mb-12">Keep up with us on socials:</h2>
         <div className="flex justify-between gap-8 text-lg font-bold w-full">
           <p>@Outfeatz</p>
           <p>@Outfeatz</p>

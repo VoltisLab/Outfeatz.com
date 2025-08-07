@@ -13,7 +13,7 @@ const Hero = () => {
     >
       {/* Headline */}
       <motion.h1
-        className="xl:text-[60.91px] md:text-[40px] text-[20px] leading-[88px] tracking-[-1.76px] font-extrabold text-center mb-12"
+        className="xl:text-[60.91px] md:text-[40px] text-[20px] leading-[88px] tracking-[-1.76px] font-bold text-center mb-12"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2 }}

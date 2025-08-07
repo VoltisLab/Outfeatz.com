@@ -13,7 +13,7 @@ const Hero = () => {
     >
       {/* Headline */}
       <motion.h1
-        className="md:text-5xl md:text-3xl text-2xl font-bold text-center md:mb-12"
+        className="xl:text-[60.19px] md:text-[40px] text-[20px] leading-[88px] tracking-[-1.76px] text-2xl font-bold text-center md:mb-12"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2 }}
@@ -76,7 +76,7 @@ const Hero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, delay: 0.3 }}
       >
-        <h1 className='xl:text-[60.91px] md:text-[40px] text-[20px] tracking-[-0.62px] leading-[60px] font-bold'>
+        <h1 className='xl:text-[60.91px] md:text-[40px] text-[20px] tracking-[-0.62px] md:leading-[60px] font-bold'>
         According to The Cut, 
 the stress often comes from 
 decision fatigue, social pressure, 
